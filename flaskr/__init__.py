@@ -1,15 +1,13 @@
 # import aplikasi flask untuk dipakai di web kita
-from flask import Flask
+import os
 
-#mengatur nama aplikasi
-app = Flask(__name__)
-
-# mengatur URI (universal resource identifier), dan apa yang ditampilkan jika URI tersebut diakses
-@app.route('/') #ketika alamat http://127.0.0.1:5000/ dipanggil, maka server akan mengeksekusi fungsi hello()
-def hello(): # function dengan nama hello
-    return 'Hello, World!'
-
-#mengatur URI ke http://123.0.0.1:5000/login, dan mengeksekusi fungsi() jika diakses di alamat URI http://127.0.0.1:500/login
+# import SQL utk akses databse
+from cs50 import SQL 
+# import flash utk notifikasi pada web
+# import jsonify utk memformat data
+# import redirect dan render_template untuk berpindah halaman web
+# import request dan session untuk mengakses data
+# from flask import Flask, flash, jsonify, redirect, render_template, request, session
 @app.route("/login")
 def login():
     return 'halaman login'
